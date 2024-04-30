@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>page title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="header">Header</h1>
+  </header>
+  <section>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+      </ul>
+    </nav>
+    <article>
+      <h2>Article heading</h2>
+      <p>Paragraph...</p>
+      <a href="https://www.google.com/">More information...</a>
+      <p><img src="honey1.jpg" alt="honey" width=150px" height="200px"></p>
+      <section>
+        <form>
+          <h3>Address</h3>
+          <label for="street">Street:</label> 
+          <input type="text" id="street" name="street"><br>
+          <label for="suburb">Suburb:</label> 
+          <input type="text" id="suburb" name="suburb"><br>
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city"><br>
+          <label for="postcode">Postcode:</label>
+          <input type="number" id="postcode" name="postcode"><br>
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country"><br>
+          <input type="button" value="Order Now" onclick="shipSoon()">
+        </form>
+      </section>
+    </article>
+    <aside id="aside">
+      <h2>Related</h2>
+      <ul>
+        <li><a href="#">Article 1</Article></a></li>
+        <li><a href="#">Article 2</a></li>
+      </ul>
+    </aside>
+  </section>
+  <footer>
+    <p>&copy; 2050 by nobody. all rights recerved</p>
+  </footer>
+  <script>
+    document.getElementById('header').innerText="Hello JavaScrip";
+    document.getElementById('aside').style.backgroundColor="green";
+    function shipSoon(){
+      alert('Your order will be shipped soon.')
+    }
+  </script>
+  
+</body>
+</html>

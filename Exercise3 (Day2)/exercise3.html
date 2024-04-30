@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1 Exercise 3</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; }
+        .container { display: flex; min-height: 100vh; align-items: stretch; }
+        .column { background: goldenrod; display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1; }
+        .btn {padding: 10px;background-color: aliceblue; font-size: 1.1em; border-radius: 5px;}
+        .lbl {color: #fff;}
+    </style>
+ </head>
+ <body>
+    <div class="container">
+        <div class="column" id="column1">
+            <h1 id="heading1">Hello</h1>
+            <label for="word1" class="lbl">Enter word:</label>
+            <input type="text" id="word1" name="word1"><br>
+            <input onclick="btn1()" type="button" class="btn" value="Change Me">
+        </div>
+        <div class="column" id="column2">
+            <h1 id="heading2">World</h1>
+            <label for="word2" class="lbl">Enter word:</label>
+            <input type="text" id="word2" name="word2"><br>
+            <input onclick="btn2()" type="button" class="btn" value="Change Me">
+        </div>
+    </div>
+    <script>
+        function btn1(){
+            let txt1 = document.getElementById('word1').value;
+            document.getElementById('heading1').style.color="white";
+            document.getElementById('column1').style.backgroundColor="teal";
+            if (txt1 !== ''){
+                document.getElementById('heading1').innerText = txt1;
+            } else {
+                document.getElementById('heading1').innerText="Good Night";
+            }
+        }
+
+        function btn2(){
+            let txt2 = document.getElementById('word2').value;
+            document.getElementById('heading2').style.color="white";
+            document.getElementById('column2').style.backgroundColor="navy";
+            if (txt2 !== ''){
+                document.getElementById('heading2').innerText = txt2;
+            } else {
+                document.getElementById('heading2').innerText="New Zealand";
+            }
+        }
+    </script>
+ </body>
+ </html>
