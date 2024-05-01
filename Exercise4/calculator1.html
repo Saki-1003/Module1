@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <div>
+    <h2 class="math">Addition</h2>
+    <input id="ad-1" type="number" class="number">
+    <span>+</span>
+    <input id="ad-2" type="number" class="number">
+    <h3 id="res-ad">Result: </h3>
+    <button onclick="addition()" class="btn">Calculate</button>
+  </div>
+
+  <div>
+    <h2 class="math">Subtraction</h2>
+    <input id="sub-1" type="number" class="number">
+    <span>-</span>
+    <input id="sub-2" type="number" class="number">
+    <h3 id="res-sb">Result: </h3>
+    <button onclick="subtraction()" class="btn">Calculate</button>
+  </div>
+
+  <div>
+    <h2 class="math">Multiplication</h2>
+    <input id="mul-1" type="number" class="number">
+    <span>x</span>
+    <input id="mul-2" type="number" class="number">
+    <h3 id="res-ml">Result:</h3>
+    <button onclick="multiply()" class="btn">Calculate</button>
+  </div>
+
+  <div>
+    <h2 class="math">Division</h2>
+    <input id="div-1" type="number" class="number">
+    <span>/</span>
+    <input id="div-2" type="number" class="number">
+    <h3 id="res-dv">Result: </h3>
+    <button onclick="divide()" class="btn">Calculate</button>
+  </div>
+
+  <script>
+    function addition(){
+      let ad1 = document.getElementById('ad-1').value*1
+      let ad2 = document.getElementById('ad-2').value*1
+      let result = ad1 + ad2
+      document.getElementById('res-ad').innerText='Result: ' + result
+    }
+
+    function subtraction(){
+      let sb1 = document.getElementById('sub-1').value*1
+      let sb2 = document.getElementById('sub-2').value*1
+      let result = sb1 - sb2
+      document.getElementById('res-sb').innerText='Result: ' + result
+    }
+
+    function multiply(){
+      let ml1 = document.getElementById('mul-1').value*1
+      let ml2 = document.getElementById('mul-2').value*1
+      let result = ml1 * ml2
+      document.getElementById('res-ml').innerText='Result: ' + result
+    }
+
+    function divide(){
+      let dv1 = document.getElementById('div-1').value*1
+      let dv2 = document.getElementById('div-2').value*1
+      let result = dv1 / dv2
+      document.getElementById('res-dv').innerText='Result: ' + result
+    }
+
+  </script>
+
+
+  
+</body>
+</html>
